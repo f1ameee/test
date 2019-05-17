@@ -1,0 +1,7 @@
+.idea/
+node_modules
+.sublime-gulp.cache
+*.exe
+*.cfg
+prepros-6.config
+*.config

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iTunes - AJAX search</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+	<header class="ba-header ">
+		<img class="ba-logo" src="./favicon.png" alt="iTunes">
+		<h1 class="ba-page-title">iTunes search</h1>
+		<h4 class="ba-page-subtitle">Your music, movies, and TV shows take center stage.</h4>
+	</header>
+	<main class="ba-main">
+		<div class="ba-container">
+			<form action="#" method="POST" class="card-panel ba-search-form">
+				<div class="input-field">
+					<input required value="Mr Big" id="search-query" type="text" class="validate">
+					<label for="search-query">Enter tag for search</label>
+				  </div>
+				  <button type="submit" class="btn-floating btn-large waves-effect waves-light pink">
+					  <i class="material-icons">search</i></button>
+
+			</form>
+			<div class="divider"></div>
+			<div class="ba-tunes-wrap">
+				<div class="ba-tunes-list">
+					<script type="text/template" id="tune-tmpl">
+						<div class="card hoverable">
+								<div class="card-image">
+								  <img src="{{image}}">
+								  <span class="card-title">{{artist}}</span>
+								  <a class="btn-floating halfway-fab waves-effect waves-light pink">
+									  <i class="material-icons">play_arrow</i></a>
+								</div>
+								<div class="card-content">
+										<span class="card-title">{{songName}}</span>
+
+								  <p>Album - {{albumName}}
+									  <span class="badge new" data-badge-caption>
+										  <i class="material-icons tiny">access_time</i>
+										  {{duration}}
+									  </span>
+								  </p>
+
+								  <p class="grey-text text-lighten-1">Genre - {{genre}}</p>
+								</div>
+								<div class="card-action">
+										  <a href="{{collectionUrl}}" target="_blank">
+		  									<i class="material-icons tiny">shoping_cart</i>  
+		  									BUY COLLECTION - ${{price}}</a>
+									
+								</div>
+							  </div>
+					</script>
+						
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer blue">
+			<div class="footer-copyright">
+				<div class="container">
+					© 2019 Copyright
+					<a class="grey-text text-lighten-4 right" href="#!">created by crazy Beetroots \m/</a>
+				</div>
+			</div>
+		</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
